@@ -1,0 +1,54 @@
+.update-wrapper {
+  background-image: url('https://cdn.pixabay.com/photo/2018/04/28/11/21/update-3357083_640.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  color: white;
+}
+
+.update-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #000000;
+}
+
+.update-card .form-label {
+  color: #000000;
+  font-weight: 500;
+}
+
+.update-card .form-control {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #100b0b;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.update-card .form-control::placeholder {
+  color: #ccc;
+}
+
+.update-card .btn-success {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+}
