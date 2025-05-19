@@ -38,7 +38,7 @@ function Addemployee() {
           <label className="form-label">Email</label>
           <input type="email" className="form-control" {...register('email')} />
         </div>
-
+{/* 
         <div className="mb-3">
           <label className="form-label">Inventory Role</label>
           <select className="form-select" {...register('inventoryRole')}>
@@ -47,7 +47,7 @@ function Addemployee() {
             <option value="ORDERDELIVERY_HEAD">ORDERDELIVERY_HEAD</option>
             <option value="ADMIN">ADMIN</option>
           </select>
-        </div>
+        </div> */}
 
       
         <div className="mb-3">
