@@ -6,7 +6,7 @@ function Vieworder() {
   const { userId } = useParams();
   const [orders, setOrders] = useState([]);
   const [orderSummary, setOrderSummary] = useState({});
-  const [cartSummary, setCartSummary] = useState({});
+ 
 
 
   function getData(userId) {
@@ -14,7 +14,6 @@ function Vieworder() {
       .then(res => {
         const data = res.data;
         setOrderSummary(data.orderSummary || {});
-        setCartSummary(data.cartSummary || {});
         setOrders(data.orderSummary?.orderedProduct || []);
       })
       .catch(err => console.error(err));
@@ -22,9 +21,7 @@ function Vieworder() {
   useEffect(() =>{
     getData(userId)
   },[])
-  // useEffect(() => {
-   
-  // }, [userId]);
+  
 
   return (
     <div className="container mt-4">
@@ -61,7 +58,7 @@ function Vieworder() {
                   <td>₹{product.productPrice.toFixed(2)}</td>
                   <td>₹{(product.deliveryCharges || 0).toFixed(2)}</td>
                   <td>₹{total.toFixed(2)}</td>
-                  <td>{product.orderId || "N/A"}</td>
+                  <td>{product.orderId || "N/A"}</td> 
                   <td>{product.requestAmount ? `₹${Number(product.requestAmount).toFixed(2)}` : "N/A"}</td>
                   <td>{product.orderStatus || "N/A"}</td>
                 </tr>
