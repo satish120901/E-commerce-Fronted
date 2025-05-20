@@ -10,8 +10,6 @@ const userJson = localStorage.getItem("user");
 const userData = userJson ? JSON.parse(userJson) : null;
 const role = userData?.role?.toUpperCase(); 
 
-
-
   const options={
     
     USER:[
