@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 function ViewCart() {
   const userJson = localStorage.getItem("user");
     const {userId} = JSON.parse(userJson);
-
   const [data, setData] = useState({
     userId: '',
     orderSummary: {
@@ -18,7 +16,6 @@ function ViewCart() {
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
   useEffect(() => {
     axios.get(`http://localhost:9294/user/view_Cart/${userId}`)
       .then(response => {
@@ -30,16 +27,13 @@ function ViewCart() {
         setLoading(false);
       });
   }, []);
-
   if (loading) {
     return <p>Loading...</p>;
   }
-
   if (error) {
     return <p>Error: {error.message}</p>;
   }
-
-  return (
+ return (
     <div>
       <h2>User ID: {userId}</h2>
      <h1>Products</h1>
@@ -53,7 +47,6 @@ function ViewCart() {
             <p>{product.brand}</p>
             <p>{product.price}</p>
           </div>
-
    </tr>
    
    ))}
@@ -61,5 +54,4 @@ function ViewCart() {
    </div>
   );
 }
-
 export default ViewCart;

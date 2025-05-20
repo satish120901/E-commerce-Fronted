@@ -20,8 +20,6 @@ const employeeJson = localStorage.getItem("employee");
 const employeeData = employeeJson ? JSON.parse(employeeJson) : null;
 const inventoryRole = employeeData?.inventoryRole?.toUpperCase(); 
 
-
-
 const userJson = localStorage.getItem("user");
 const userData = userJson ? JSON.parse(userJson) : null;
 const role = userData?.role?.toUpperCase(); 

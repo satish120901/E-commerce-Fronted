@@ -10,7 +10,7 @@ import About from './Header/About'
 import Home from './Header/Home'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import Header from './Header/Header'
-import Dashboard from './DashBoard/Dashboard'
+import Dashboard from './dashboard/Dashboard'
 import Update from './Modules/User/Update'
 
 
