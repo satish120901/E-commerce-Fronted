@@ -60,6 +60,44 @@ function AddProduct() {
       <div className="container w-50">
         <h2 className="mb-4 text-center">Add Product</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
+      {/* Product details */}
+          <input {...register("productName")} placeholder="Product Name" className="form-control mb-2" />
+          <input {...register("description")} placeholder="Description" className="form-control mb-2" />
+          <input {...register("brand")} placeholder="Brand" className="form-control mb-2" />
+          <input {...register("category")} placeholder="Category" className="form-control mb-2" />
+          <input type="number" step="0.01" {...register("price")} placeholder="Price" className="form-control mb-2" />
+          <input type="number" {...register("quantityAvailable")} placeholder="Quantity Available" className="form-control mb-2" />
+          <input {...register("supplierName")} placeholder="Supplier Name" className="form-control mb-2" />
+          <input {...register("supplierContact")} placeholder="Supplier Contact" className="form-control mb-2" />
+          <input type="number" {...register("warrantyPeriod")} placeholder="Warranty Period (months)" className="form-control mb-2" />
+          <div className="form-check mb-3">
+            <input type="checkbox" {...register("available")} className="form-check-input" id="availableCheck" />
+            <label className="form-check-label" htmlFor="availableCheck">Available</label>
+          </div>
+
+          {/* Product Features */}
+          <h5>Product Features</h5>
+          <input {...register("feature1")} placeholder="Feature 1 (e.g., RAM)" className="form-control mb-2" />
+          <input {...register("featureDesc1")} placeholder="Feature 1 Description" className="form-control mb-2" />
+          <input {...register("feature2")} placeholder="Feature 2" className="form-control mb-2" />
+          <input {...register("featureDesc2")} placeholder="Feature 2 Description" className="form-control mb-2" />
+          <input {...register("feature3")} placeholder="Feature 3" className="form-control mb-2" />
+          <input {...register("featureDesc3")} placeholder="Feature 3 Description" className="form-control mb-2" />
+
+          {/* Product Reviews */}
+          <h5>Customer Reviews</h5>
+          <input {...register("reviewer1")} placeholder="Reviewer 1 Name" className="form-control mb-2" />
+          <input type="number" {...register("rating1")} placeholder="Rating 1 (1–5)" className="form-control mb-2" />
+          <input {...register("message1")} placeholder="Review Message 1" className="form-control mb-2" />
+
+          <input {...register("reviewer2")} placeholder="Reviewer 2 Name" className="form-control mb-2" />
+          <input type="number" {...register("rating2")} placeholder="Rating 2 (1–5)" className="form-control mb-2" />
+          <input {...register("message2")} placeholder="Review Message 2" className="form-control mb-2" />
+
+          {/* Image Upload */}
+          <h5>Product Images</h5>
+          <input type="file" {...register("image1")} className="form-control mb-2" />
+          <input type="file" {...register("image2")} className="form-control mb-3" />
           
           <button type="submit" className="btn btn-primary w-100">Submit Product</button>
         </form>

@@ -10,10 +10,11 @@ function Login() {
   function onLogin(data) {
     alert('Logging In...');
     axios
-      .get(`http://localhost:9293/employee/login/${data.username}/${data.password}`)
+      .get(`http://localhost:9294/user/loginUser/${data.username}/${data.password}`)
       .then((res) => {
         console.log(res.data);
-        localStorage.setItem('employee', JSON.stringify(res.data));
+       // localStorage.setItem('employee', JSON.stringify(res.data));
+        localStorage.setItem('user', JSON.stringify(res.data));
         navigate('/dashboard');
       })
       .catch((error) => console.log(error));
